@@ -90,7 +90,7 @@ abstract class ValidationExpression {
 class ABValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
-  constructor(cloud: EvaporatingCloud){
+  constructor(cloud: EvaporatingCloud) {
     this.cloud = cloud;
   }
 
@@ -109,7 +109,7 @@ class ABValidationExpression implements ValidationExpression {
 class ACValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
-  constructor(cloud: EvaporatingCloud){
+  constructor(cloud: EvaporatingCloud) {
     this.cloud = cloud;
   }
 
@@ -128,7 +128,7 @@ class ACValidationExpression implements ValidationExpression {
 class BDValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
-  constructor(cloud: EvaporatingCloud){
+  constructor(cloud: EvaporatingCloud) {
     this.cloud = cloud;
   }
 
@@ -147,7 +147,7 @@ class BDValidationExpression implements ValidationExpression {
 class CDAltValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
-  constructor(cloud: EvaporatingCloud){
+  constructor(cloud: EvaporatingCloud) {
     this.cloud = cloud;
   }
 
