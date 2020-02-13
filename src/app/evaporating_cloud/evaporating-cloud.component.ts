@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, Output } from '@angular/core';
 
 @Component({
+  selector: 'evaporating-cloud',
   styleUrls: ['./evaporating-cloud.component.css'],
   templateUrl: 'evaporating-cloud.component.html',
 })
