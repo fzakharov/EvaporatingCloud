@@ -19,7 +19,7 @@ export class EvaporatingCloudComponent {
   dcExp: DCValidationExpression;
   dAltbExp: DAltBValidationExpression;
 
-  EvaporatingCloudComponent() {
+  constructor() {
     this.cloud = new EvaporatingCloud();
     this.abExp = new ABValidationExpression(this.cloud);
     this.acExp = new ACValidationExpression(this.cloud);
