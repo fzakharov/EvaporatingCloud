@@ -3,7 +3,7 @@ import { ValidationExpression } from '../model/Entity';
 
 @Component({
   selector: 'validation-expression',
-  styleUrls: ['./validation-expression.component.css'],
+  styleUrls: ['validation-expression.component.css'],
   templateUrl: 'validation-expression.component.html',
 })
 export class ValidationExpressionComponent {

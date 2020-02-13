@@ -12,7 +12,7 @@ import {
 
 @Component({
   selector: 'evaporating-cloud',
-  styleUrls: ['./evaporating-cloud.component.css'],
+  styleUrls: ['evaporating-cloud.component.css'],
   templateUrl: 'evaporating-cloud.component.html',
 })
 export class EvaporatingCloudComponent {

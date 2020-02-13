@@ -4,7 +4,7 @@ import { StatementEntity } from '../model/Entity';
 
 @Component({
   selector: 'logical-entity',
-  styleUrls: ['./logical-entity.component.css'],
+  styleUrls: ['logical-entity.component.css'],
   templateUrl: 'logical-entity.component.html'
 })
 export class LogicalEntityComponent {
