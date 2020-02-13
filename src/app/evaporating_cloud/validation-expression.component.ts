@@ -1,4 +1,5 @@
 import { Input, Component } from '@angular/core';
+import { ValidationExpression } from '../model/Entity';
 
 @Component({
   selector: 'validation-expression',

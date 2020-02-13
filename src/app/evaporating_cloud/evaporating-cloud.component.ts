@@ -1,4 +1,14 @@
 import { Component, OnInit, OnChanges, Output } from '@angular/core';
+import {
+  EvaporatingCloud,
+  ABValidationExpression,
+  ACValidationExpression,
+  BDValidationExpression,
+  CDAltValidationExpression,
+  DDAltValidationExpression,
+  DCValidationExpression,
+  DAltBValidationExpression
+} from '../model/Entity';
 
 @Component({
   selector: 'evaporating-cloud',

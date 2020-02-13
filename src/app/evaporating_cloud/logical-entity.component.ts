@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatInput } from '@angular/material';
+import { StatementEntity } from '../model/Entity';
 
 @Component({
   selector: 'logical-entity',

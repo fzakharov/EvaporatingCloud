@@ -1,10 +1,10 @@
-class Entity {
+export class Entity {
   expression: string;
 }
 
-class StatementEntity extends Entity {}
+export class StatementEntity extends Entity {}
 
-class EnterEntity extends Entity {
+export class EnterEntity extends Entity {
   to: StatementEntity;
   constructor(to: StatementEntity) {
     super();
@@ -12,7 +12,7 @@ class EnterEntity extends Entity {
   }
 }
 
-class LinkEntity extends EnterEntity {
+export class LinkEntity extends EnterEntity {
   from: StatementEntity;
 
   constructor(from: StatementEntity, to: StatementEntity) {
@@ -21,13 +21,13 @@ class LinkEntity extends EnterEntity {
   }
 }
 
-class ObjectiveEntity extends StatementEntity {}
+export class ObjectiveEntity extends StatementEntity {}
 
-class NeedEntity extends StatementEntity {}
+export class NeedEntity extends StatementEntity {}
 
-class WantEntity extends StatementEntity {}
+export class WantEntity extends StatementEntity {}
 
-class EvaporatingCloud extends Entity {
+export class EvaporatingCloud extends Entity {
   objective = new ObjectiveEntity();
   bNeed = new NeedEntity();
   cNeed = new NeedEntity();
@@ -83,11 +83,11 @@ class EvaporatingCloud extends Entity {
   }
 }
 
-abstract class ValidationExpression {
+export abstract class ValidationExpression {
   abstract getExpressionChain(): Entity[];
 }
 
-class ABValidationExpression implements ValidationExpression {
+export class ABValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -106,7 +106,7 @@ class ABValidationExpression implements ValidationExpression {
   }
 }
 
-class ACValidationExpression implements ValidationExpression {
+export class ACValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -125,7 +125,7 @@ class ACValidationExpression implements ValidationExpression {
   }
 }
 
-class BDValidationExpression implements ValidationExpression {
+export class BDValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -144,7 +144,7 @@ class BDValidationExpression implements ValidationExpression {
   }
 }
 
-class CDAltValidationExpression implements ValidationExpression {
+export class CDAltValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -163,7 +163,7 @@ class CDAltValidationExpression implements ValidationExpression {
   }
 }
 
-class DDAltValidationExpression implements ValidationExpression {
+export class DDAltValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -181,7 +181,7 @@ class DDAltValidationExpression implements ValidationExpression {
   }
 }
 
-class DCValidationExpression implements ValidationExpression {
+export class DCValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
@@ -199,7 +199,7 @@ class DCValidationExpression implements ValidationExpression {
   }
 }
 
-class DAltBValidationExpression implements ValidationExpression {
+export class DAltBValidationExpression implements ValidationExpression {
   cloud: EvaporatingCloud;
 
   constructor(cloud: EvaporatingCloud) {
