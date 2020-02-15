@@ -1,3 +1,10 @@
 <div>
-  <input input matInput multiline class="box" [(ngModel)]="entity.expression"/>
+  <textarea matInput
+            class="box"
+            multiline
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="5"
+            [(ngModel)]="entity.expression"></textarea>
 </div>
