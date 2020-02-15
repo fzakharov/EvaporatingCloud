@@ -40,4 +40,16 @@ export class EvaporatingCloudComponent {
     this.dcExp = new DCValidationExpression(this.cloud);
     this.dAltbExp = new DAltBValidationExpression(this.cloud);
   }
+
+  onSaveJson() {
+    let dataStr = JSON.stringify(this.cloud, null, 2);
+    let dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+
+    let exportFileDefaultName = 'data.json';
+
+    let linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement.click();
+  }
 }
