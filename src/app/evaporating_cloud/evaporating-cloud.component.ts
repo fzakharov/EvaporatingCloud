@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Output } from "@angular/core";
+import { Component, OnInit, OnChanges, Output } from '@angular/core';
 import {
   EvaporatingCloud,
   ABValidationExpression,
@@ -8,17 +8,17 @@ import {
   DDAltValidationExpression,
   DCValidationExpression,
   DAltBValidationExpression
-} from "../model/Entity";
+} from '../model/Entity';
 
 @Component({
   selector: "evaporating-cloud",
-  styleUrls: ["evaporating-cloud.component.css"],
-  templateUrl: "evaporating-cloud.component.html"
+  styleUrls: ['evaporating-cloud.component.css'],
+  templateUrl: 'evaporating-cloud.component.html'
 })
 export class EvaporatingCloudComponent {
   @Output()
   cloud: EvaporatingCloud;
-  prefixExpression = "Для того чтобы";
+  prefixExpression = 'Для того чтобы';
   abExp: ABValidationExpression;
   acExp: ACValidationExpression;
   bdExp: BDValidationExpression;
@@ -43,13 +43,13 @@ export class EvaporatingCloudComponent {
   onSaveJson() {
     let dataStr = JSON.stringify(this.cloud, null, 2);
     let dataUri =
-      "data:application/json;charset=utf-8," + encodeURIComponent(dataStr);
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
-    let exportFileDefaultName = "data.json";
+    let exportFileDefaultName = 'data.json';
 
-    let linkElement = document.createElement("a");
-    linkElement.setAttribute("href", dataUri);
-    linkElement.setAttribute("download", exportFileDefaultName);
+    let linkElement = document.createElement('a');
+    linkElement.setAttribute('href', dataUri);
+    linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
   }
 
