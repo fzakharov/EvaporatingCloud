@@ -48,7 +48,7 @@ export class EvaporatingCloud extends Entity {
 
   constructor() {
     super();
-    this. objectiveEnter = new EnterEntity(this.objective);
+    this.objectiveEnter = new EnterEntity(this.objective);
     this.bNeedEnter = new EnterEntity(this.bNeed);
     this.cNeedEnter = new EnterEntity(this.cNeed);
 
@@ -62,24 +62,28 @@ export class EvaporatingCloud extends Entity {
     this.dcLink = new LinkEntity(this.dWant, this.cNeed);
     this.dAltbLink = new LinkEntity(this.dAltWant, this.bNeed);
 
-    this.dcLink.expression = this.dAltbLink.expression = 'ставит под угрозу';
+    this.dcLink.expression = this.dAltbLink.expression = "ставит под угрозу";
 
-    this.objectiveEnter.expression = 'Для того, чтобы';
-    this.objective.expression = 'CA: Разрабатывать востребованные продукты приносящие финансовую выгоду компании';
-    this.abLink.expression = 'мы должны';
-    this.bNeed.expression = 'CB: Выполнять проекты в срок и в рамках бюджета проекта';
-    this.acLink.expression = 'мы должны';
-    this.cNeed.expression = 'CC: Дорабатывать функциональность по ОС от пользователей';
+    this.objectiveEnter.expression = "Для того, чтобы";
+    this.objective.expression =
+      "CA: Разрабатывать востребованные продукты приносящие финансовую выгоду компании";
+    this.abLink.expression = "мы должны";
+    this.bNeed.expression =
+      "CB: Выполнять проекты в срок и в рамках бюджета проекта";
+    this.acLink.expression = "мы должны";
+    this.cNeed.expression =
+      "CC: Дорабатывать функциональность по ОС от пользователей";
 
-    this.bNeedEnter.expression = 'Для того, чтобы';
-    this.bdLink.expression = 'мы должны';
-    this.dWant.expression = 'D: Завершать проект по достижению срока или исчерпанию бюджета';
+    this.bNeedEnter.expression = "Для того, чтобы";
+    this.bdLink.expression = "мы должны";
+    this.dWant.expression =
+      "D: Завершать проект по достижению срока или исчерпанию бюджета";
 
-    this.cNeedEnter.expression = 'Для того, чтобы';
-    this.cdAltLink.expression = 'мы должны';
-    this.dAltWant.expression = 'D\': Выполнять итерацию по доработкам';
+    this.cNeedEnter.expression = "Для того, чтобы";
+    this.cdAltLink.expression = "мы должны";
+    this.dAltWant.expression = "D': Выполнять итерацию по доработкам";
 
-    this.ddAltLink.expression = 'в конфликте с';
+    this.ddAltLink.expression = "в конфликте с";
   }
 }
 
@@ -215,4 +219,12 @@ export class DAltBValidationExpression implements ValidationExpression {
 
     return list;
   }
+}
+
+export class Workspace {
+  constructor() {
+    this.clouds = [new EvaporatingCloud()];
+  }
+
+  clouds: EvaporatingCloud[];
 }

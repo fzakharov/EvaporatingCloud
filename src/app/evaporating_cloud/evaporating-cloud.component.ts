@@ -11,7 +11,7 @@ import {
 } from '../model/Entity';
 
 @Component({
-  selector: "evaporating-cloud",
+  selector: 'evaporating-cloud',
   styleUrls: ['evaporating-cloud.component.css'],
   templateUrl: 'evaporating-cloud.component.html'
 })

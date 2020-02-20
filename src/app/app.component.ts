@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Workspace, EvaporatingCloud } from './model/Entity';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'toc';
+  workspace: Workspace = new Workspace();
+
+  addClick() {
+    this.workspace.clouds.push(new EvaporatingCloud());
+  }
 }
