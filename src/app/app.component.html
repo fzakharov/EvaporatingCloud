@@ -1,2 +1,15 @@
-<button (click)="addClick()">Add new</button>
+<mat-toolbar>
+  <span>App name</span>
+  <span class="nav-tool-items">
+    <button mat-button (click)="addClick()">Add new</button>
+  </span>
+  <span class="fill-remaining-space"></span>
+  <span class="nav-tool-items">
+    <a mat-button>Save</a>
+  </span>
+
+  <span class="nav-tool-items">
+    <a mat-button>Load</a>
+  </span>
+</mat-toolbar>
 <evaporating-cloud *ngFor="let cloud of workspace.clouds"></evaporating-cloud>

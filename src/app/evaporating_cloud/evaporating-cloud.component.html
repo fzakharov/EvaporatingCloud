@@ -1,25 +1,71 @@
+<mat-toolbar>
+  <span>App name</span>
+  <span class="fill-remaining-space"></span>
+  <span class="nav-tool-items">
+    <button mat-button (click)="onSaveJson()">Save</button>
+  </span>
+  <span class="nav-tool-items">
+    <input
+        type="file"
+        accept="application/JSON"
+        multiple
+        (change)="openFile($event)"
+      />
+  </span>
+</mat-toolbar>
 <table>
   <tr>
-    <td class="entity"><button mat-raised-button (click)="onSaveJson()">Save...</button></td>
-    <td class="nocell"><input type='file' accept='text/plain' multiple (change)='openFile($event)'></td>
-    <td colspan="3"><validation-expression [(validationExpression)]="bdExp"></validation-expression></td>
+    <td class="entity"></td>
+    <td class="nocell">
+    </td>
+    <td colspan="3">
+      <validation-expression
+        [(validationExpression)]="bdExp"
+      ></validation-expression>
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><validation-expression [(validationExpression)]="abExp"></validation-expression></td>
-    <td class="entity"><logical-entity [(entity)]="cloud.bNeed"></logical-entity></td>
+    <td colspan="2">
+      <validation-expression
+        [(validationExpression)]="abExp"
+      ></validation-expression>
+    </td>
+    <td class="entity">
+      <logical-entity [(entity)]="cloud.bNeed"></logical-entity>
+    </td>
     <td class="nocell"></td>
-    <td class="entity"><logical-entity [(entity)]="cloud.dWant"></logical-entity></td>
+    <td class="entity">
+      <logical-entity [(entity)]="cloud.dWant"></logical-entity>
+    </td>
   </tr>
   <tr>
-    <td rowspan="2"><logical-entity [(entity)]="cloud.objective"></logical-entity></td>
-    <td colspan="3"><validation-expression [(validationExpression)]="dcExp"></validation-expression></td>
-    <td rowspan="2"><validation-expression [(validationExpression)]="ddAltExp"></validation-expression></td>
+    <td rowspan="2">
+      <logical-entity [(entity)]="cloud.objective"></logical-entity>
+    </td>
+    <td colspan="3">
+      <validation-expression
+        [(validationExpression)]="dcExp"
+      ></validation-expression>
+    </td>
+    <td rowspan="2">
+      <validation-expression
+        [(validationExpression)]="ddAltExp"
+      ></validation-expression>
+    </td>
   </tr>
   <tr>
-    <td colspan="3"><validation-expression [(validationExpression)]="dAltbExp"></validation-expression></td>
+    <td colspan="3">
+      <validation-expression
+        [(validationExpression)]="dAltbExp"
+      ></validation-expression>
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><validation-expression [(validationExpression)]="acExp"></validation-expression></td>
+    <td colspan="2">
+      <validation-expression
+        [(validationExpression)]="acExp"
+      ></validation-expression>
+    </td>
     <td><logical-entity [(entity)]="cloud.cNeed"></logical-entity></td>
     <td></td>
     <td><logical-entity [(entity)]="cloud.dAltWant"></logical-entity></td>
@@ -27,6 +73,10 @@
   <tr>
     <td></td>
     <td></td>
-    <td colspan="3"><validation-expression [(validationExpression)]="cdAltExp"></validation-expression></td>
+    <td colspan="3">
+      <validation-expression
+        [(validationExpression)]="cdAltExp"
+      ></validation-expression>
+    </td>
   </tr>
 </table>

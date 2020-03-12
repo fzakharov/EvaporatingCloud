@@ -9,3 +9,7 @@ body {
 * {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
